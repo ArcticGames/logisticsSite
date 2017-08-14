@@ -46,9 +46,11 @@ app.post('/login', function(req, res){
   }*/
   var username = req.body.user
   var userpass = req.body.pass
-  if(username != nil){
+  console.log(username = userpass)
+
+  /*if(username != nil){
     if(crypto.createHash('md5').update(userpass))
-  }
+  }*/
 });
 
 io.on('connection', function(socket){
