@@ -40,19 +40,22 @@ app.get('/login.js', function(req, res){
 app.post('/login.html', function(req, res){
   var username = req.body.username
   var password = req.body.password
-
+  var ip = req.connection.remoteAddress;if (ip.length >= 15) ip = ip.slice(7);
   if(users[username] != null){
     if(users[username].toString() == password.toString()){
-      console.log('Successful login from ' + req.connection.remoteAddress + ' as user ' + username)
+      console.log('Successful login from ' + ip + ' as user ' + username)
       res.sendFile(path.join(__dirname + '/main.html'))
     }else{
-      console.log('The password or username is wrong')
+      res.send('401')
+      console.log('Unsuccessful login attempt from ' + ip + ' (wrong password)');
     }
   }else{
-    console.log('The password or username is wrong')
+    res.send('401')
+    console.log('Unsuccessful login attempt from ' + ip + ' (wrong username)');
   }
 });
 
+//connect users with ips after logins
 io.on('connection', function(socket){
 
 })
