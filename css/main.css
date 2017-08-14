@@ -3,3 +3,23 @@ body {
 
 
 }
+
+.button {
+  padding: 10px 10px;
+
+
+}
+
+#ButtonGroup .button {
+  background-color: red;
+  border: 1px solid Blue;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  display: block;
+
+
+}
