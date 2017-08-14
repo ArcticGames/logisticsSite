@@ -1,5 +1,7 @@
-var socket = io.connect();
+$(document).ready(function(){
+  var socket = io.connect();
 
-socket.on('connected', function(data){
-  console.log(data.message);
-});
+  socket.on('connected', function(data){
+    console.log(data.message);
+  });
+})
