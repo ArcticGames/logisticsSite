@@ -15,5 +15,21 @@ body {
   border: none;
   border-radius: 15px;
   background-color: #56CBF9;
+  display: block;
+
+}
+
+#inputs_login {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  display: block;
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+  margin: 10px;
 
 }
