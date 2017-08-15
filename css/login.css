@@ -1,0 +1,19 @@
+body {
+  background-color: #30C5FF;
+
+
+}
+
+
+#submit_button {
+  padding: 15px 25px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  background-color: #56CBF9;
+
+}

@@ -8,7 +8,7 @@ var crypto = require('crypto');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-var port = 80;
+var port = 6985;
 
 var users = {leo: 'test', leopold: 'test1'}
 
