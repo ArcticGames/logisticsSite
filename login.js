@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  if(localStorage.getItem('fail') == 'true'){
+    $('#attempt').text('Wrong username or password');
+    localStorage.setItem('fail', null);
+  };
   var MD5 = new Hashes.MD5;
   $('#submit_button').click(function(){
     var username = $('#user').val();
@@ -6,11 +10,8 @@ $(document).ready(function(){
     $.post('/login.html', {username: username, password: password}, function(data){
       console.log('posted')
       if(data == '401'){
+        localStorage.setItem('fail', 'true')
         window.location.reload()
-        $(document).ready(function() {
-          console.log('done');
-          $('#attempt').text('Wrong username or password');
-        });
       }
       console.log(data);
       $('body').html(data)
